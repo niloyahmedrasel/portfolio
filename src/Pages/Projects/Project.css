@@ -1,0 +1,38 @@
+.project-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* Initially set the width to 0 */
+    height: 100%;
+    background-color: rgba(10, 10, 209, 0.7); /* Set your desired color and transparency */
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .project-button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .project-item:hover .overlay {
+    width: 100%; /* Expand the width to 100% on hover */
+    opacity: 1;
+  }
+  
+  .project-item:hover .project-button {
+    opacity: 1;
+  }
+  
